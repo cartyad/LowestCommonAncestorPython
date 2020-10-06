@@ -28,6 +28,7 @@ class Node:
         return path1[i-1]
     root =Node(1)
     root.left = Node(2)
-    root.right = Node (3)    
+    root.right = Node (3)   
+    root.left.left = Node(4) 
 
          
