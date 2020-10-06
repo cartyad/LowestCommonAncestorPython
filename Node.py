@@ -38,11 +38,3 @@ print( "LCA(1,3) = ", findLCA(root, 1, 3).key)
 print("LCA(1,2) = ", findLCA(root, 1, 2).key) 
 print("LCA(1,6) = ", findLCA(root, 1, 6).key) 
 print("LCA(1,7) = ", findLCA(root, 1, 7).key) 
-
-
-
-
-
-
-
-         
