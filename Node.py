@@ -32,6 +32,7 @@ class Node:
     root.left.left = Node(4)
     root.left.right = Node(5)
     root.right.left = Node(6)
+    root.right.right = Node(7)
 
 
          
