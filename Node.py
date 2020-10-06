@@ -31,10 +31,10 @@ root.left.left = Node(1)
 root.left.right = Node(3) 
 root.right.left = Node(2) 
 root.right.right = Node(4) 
-print( "LCA(4,5) = ", findLCA(root, 1, 3).key) 
-print("LCA(4,6) = ", findLCA(root, 1, 2).key) 
-print("LCA(3,4) = ", findLCA(root, 1, 6).key) 
-print("LCA(2,4) = ", findLCA(root, 1, 7).key) 
+print( "LCA(-1,3) = ", findLCA(root, -1, 3).key) 
+print("LCA(1,2) = ", findLCA(root, 1, 2).key) 
+print("LCA(1,6) = ", findLCA(root, 1, 6).key) 
+print("LCA(1,7) = ", findLCA(root, 1, 7).key) 
 
 
 
