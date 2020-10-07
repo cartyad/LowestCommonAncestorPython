@@ -7,6 +7,14 @@ class Node:
         self.left = None
         self.right = None
       
+def findLCAKey(root,n1,n2):
+    if(findLCA(root, n1, n2)==None):
+        return -1
+
+    if findLCA(root, n1,n2) != None:
+        LCANode=findLCA(root, n1,n2)
+        return LCANode.key
+
 def findLCA(root, n1, n2): 
        
     if root is None: 
@@ -26,7 +34,6 @@ def findLCA(root, n1, n2):
    
     return left_lca if left_lca is not None else right_lca 
   
-
 root = Node(5) 
 root.left = Node(7) 
 root.right = Node(6) 
@@ -34,7 +41,7 @@ root.left.left = Node(1)
 root.left.right = Node(3) 
 root.right.left = Node(2) 
 root.right.right = Node(4) 
-print( "LCA(1,3) = ", findLCA(root, 1, 3).key) 
-print("LCA(1,2) = ", findLCA(root, 1, 2).key) 
-print("LCA(1,6) = ", findLCA(root, 1, 6).key) 
-print("LCA(1,7) = ", findLCA(root, 1, 7).key) 
+print( "LCA(1,3) = ", findLCAKey(root, 1, 3)) 
+print("LCA(1,2) = ", findLCAKey(root, 1, 2)) 
+print("LCA(1,6) = ", findLCAKey(root, 1, 6)) 
+print("LCA(1,7) = ", findLCAKey(root, 1, 7)) 
