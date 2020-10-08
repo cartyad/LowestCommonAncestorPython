@@ -16,35 +16,16 @@ def findLCAKey(root,n1,n2):
         return LCANode.key
 
 def findLCA(root, n1, n2): 
-       
-    if root is None: 
-        return None
+      
+    v = [False, False] 
 
-    if n1<0 or n2<0:
-        return None
-  
-    if root.key == n1 or root.key == n2: 
-        return root  
-    """
-    if root.left==None and root.right==None:
-        return None
+    lca = findLCAUtil(root, n1, n2, v) 
+ 
+    if (v[0] and v[1] or v[0] and find(lca, n2) or v[1] and 
+        find(lca, n1)): 
+        return lca 
 
-    if root.left==None and root.right!=None:
-        right_lca = findLCA(root.right, n1, n2) 
-
-    if root.right==None and root.left!=None:
-        left_lca = findLCA(root.left, n1, n2)     
-    """
-
-    left_lca = findLCA(root.left, n1, n2)  
-    right_lca = findLCA(root.right, n1, n2) 
-    
-    if left_lca and right_lca: 
-        return root  
-   
-    return left_lca if left_lca is not None else right_lca
-    
-    
+    return None
   
 root = Node(1) 
 root.left = Node(2) 
