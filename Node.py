@@ -46,13 +46,13 @@ def findLCA(root, n1, n2):
     
     
   
-root = Node(5) 
-root.left = Node(7) 
-root.right = Node(6) 
-root.left.left = Node(1) 
-root.left.right = Node(3) 
-root.right.left = Node(2) 
-root.right.right = Node(4) 
+root = Node(1) 
+root.left = Node(2) 
+root.right = Node(3) 
+root.left.left = Node(4) 
+root.left.right = Node(5) 
+root.right.left = Node(6) 
+root.right.right = Node(7)
 print("An error or non-existent LCA will appear as")
 print( "LCA(1,3) = ", findLCAKey(root, 1, 3)) 
 print("LCA(1,2) = ", findLCAKey(root, 1, 2)) 
