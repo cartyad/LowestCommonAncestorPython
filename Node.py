@@ -53,8 +53,26 @@ root.left.left = Node(4)
 root.left.right = Node(5) 
 root.right.left = Node(6) 
 root.right.right = Node(7)
-print("An error or non-existent LCA will appear as")
-print( "LCA(1,3) = ", findLCAKey(root, 1, 3)) 
-print("LCA(1,2) = ", findLCAKey(root, 1, 2)) 
-print("LCA(1,6) = ", findLCAKey(root, 1, 6)) 
-print("LCA(1,7) = ", findLCAKey(root, 1, 7)) 
+lca = findLCA(root, 4, 5) 
+if lca is not None: 
+    print("LCA(4, 5) = ", lca.key) 
+else : 
+    print("LCA(4, 5) Keys are not present")
+  
+lca = findLCA(root, 4, 10) 
+if lca is not None: 
+    print("LCA(4,10) = ", lca.key) 
+else: 
+    print("LCA(4,10) Keys are not present")
+
+lca = findLCA(root, -1, 10) 
+if lca is not None: 
+    print("LCA(-1,10) = ", lca.key) 
+else: 
+    print("LCA(-1,10) Keys are not present")   
+
+lca = findLCA(root, 40, 10) 
+if lca is not None: 
+    print("LCA(40,10) = ", lca.key) 
+else: 
+    print("LCA(40,10) Keys are not present")   
