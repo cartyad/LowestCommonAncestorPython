@@ -58,6 +58,7 @@ root.left.left = Node(4)
 root.left.right = Node(5) 
 root.right.left = Node(6) 
 root.right.right = Node(7)
+
 lca = findLCA(root, 4, 5) 
 if lca is not None: 
     print("LCA(4, 5) = ", lca.key) 
@@ -70,14 +71,26 @@ if lca is not None:
 else: 
     print("LCA(4,10) Keys are not present")
 
-lca = findLCA(root, -1, 10) 
+lca = findLCA(root, -1, 5) 
 if lca is not None: 
-    print("LCA(-1,10) = ", lca.key) 
+    print("LCA(-1,5) = ", lca.key) 
 else: 
-    print("LCA(-1,10) Keys are not present")   
+    print("LCA(-1,5) Keys are not present")   
 
 lca = findLCA(root, 40, 10) 
 if lca is not None: 
     print("LCA(40,10) = ", lca.key) 
 else: 
     print("LCA(40,10) Keys are not present")   
+
+lca = findLCA(root, 2, 5) 
+if lca is not None: 
+    print("LCA(2, 5) = ", lca.key) 
+else : 
+    print("LCA(2, 5) Keys are not present")   
+
+lca = findLCA(root, 4, 4) 
+if lca is not None: 
+    print("LCA(4, 4) = ", lca.key) 
+else : 
+    print("LCA(4, 4) Keys are not present")     
