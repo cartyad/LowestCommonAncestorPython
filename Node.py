@@ -15,6 +15,17 @@ def findLCAKey(root,n1,n2):
         LCANode=findLCA(root, n1,n2)
         return LCANode.key
 
+def find(root, k): 
+      
+    if root is None: 
+        return False
+
+    if (root.key == k or find(root.left, k) or
+        find(root.right, k)): 
+        return True
+
+    return False        
+
 def findLCA(root, n1, n2): 
       
     v = [False, False] 
