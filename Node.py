@@ -50,7 +50,7 @@ def findLCA(root, n1, n2):
         return lca 
 
     return None
-  
+'''  
 root = Node(1) 
 root.left = Node(2) 
 root.right = Node(3) 
@@ -94,3 +94,4 @@ if lca is not None:
     print("LCA(4, 4) = ", lca.key) 
 else : 
     print("LCA(4, 4) Keys are not present")     
+'''
