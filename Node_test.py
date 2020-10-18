@@ -14,3 +14,8 @@ class Node_test(unittest.TestCase):
     def testRoot(self):
         root = Node.tree()
         self.assertEquals(root.key,1)
+        
+    def testRegularNodes(self):
+        root = Node.tree()
+        testNode1 =Node.findLCA(root, 4, 5)
+        self.assertEquals(testNode1.key, 2)    
