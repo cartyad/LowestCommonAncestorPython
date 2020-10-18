@@ -42,5 +42,16 @@ class Node_test(unittest.TestCase):
         
         testNode3 =Node.findLCA(root, -1, -5)
         self.assertEquals(testNode3, None) 
+    
+    def testNodeLargerThanBiggestNode(self):
+        root = Node.tree()
+        testNode1 =Node.findLCA(root, 20, 5)
+        self.assertEquals(testNode1, None)  
+        
+        testNode1 =Node.findLCA(root, 1, 50)
+        self.assertEquals(testNode1, None)    
+        
+        testNode1 =Node.findLCA(root, 100, 50)
+        self.assertEquals(testNode1, None) 
         
         
