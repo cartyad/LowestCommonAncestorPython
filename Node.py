@@ -59,7 +59,7 @@ def tree():
     root.left.right = Node(5) 
     root.right.left = Node(6) 
     root.right.right = Node(7)
-    return root
+    return root.key
 
 
 '''  
