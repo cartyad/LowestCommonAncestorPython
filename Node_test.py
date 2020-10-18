@@ -44,6 +44,11 @@ class Node_test(unittest.TestCase):
         self.assertEquals(testNode1, None)    
         
         testNode1 =Node.findLCA(root, 100, 50)
-        self.assertEquals(testNode1, None) 
+        self.assertEquals(testNode1, None)
+        
+    def testNullTree(self):
+        root=Node.nullTree()
+        testNode1 =Node.findLCA(root, 1, 5)
+        self.assertEquals(testNode1, None)      
         
         

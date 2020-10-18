@@ -61,6 +61,10 @@ def tree():
     root.right.right = Node(7)
     return root
 
+def nullTree():
+    root=None
+    return root
+
 
 '''  
 root = Node(1) 
