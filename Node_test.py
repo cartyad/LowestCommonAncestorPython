@@ -31,3 +31,16 @@ class Node_test(unittest.TestCase):
         
         testNode1 =Node.findLCA(root, 5, 5)
         self.assertEquals(testNode1.key, 5)  
+        
+    def testNegativeNodeValue(self):
+        root = Node.tree()
+        testNode1 =Node.findLCA(root, -1, 5)
+        self.assertEquals(testNode1, None) 
+        
+        testNode2 =Node.findLCA(root, 1, -5)
+        self.assertEquals(testNode2, None) 
+        
+        testNode3 =Node.findLCA(root, -1, -5)
+        self.assertEquals(testNode3, None) 
+        
+        
