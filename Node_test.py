@@ -13,4 +13,4 @@ class Node_test(unittest.TestCase):
         ''' 
     def testRoot(self):
         root = Node.tree()
-        self.assertEquals(root,1)
+        self.assertEquals(root.key,1)
