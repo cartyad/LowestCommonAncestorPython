@@ -17,5 +17,17 @@ class Node_test(unittest.TestCase):
         
     def testRegularNodes(self):
         root = Node.tree()
+        
         testNode1 =Node.findLCA(root, 4, 5)
         self.assertEquals(testNode1.key, 2)    
+        
+        testNode2 =Node.findLCA(root, 2, 5)
+        self.assertEquals(testNode2.key, 2)
+        
+    def testIdenticalNodeInput(self):
+        root = Node.tree()
+        testNode =Node.findLCA(root, 4, 4)
+        self.assertEquals(testNode.key, 4)    
+        
+        testNode1 =Node.findLCA(root, 5, 5)
+        self.assertEquals(testNode1.key, 5)  
